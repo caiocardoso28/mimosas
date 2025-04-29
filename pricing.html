@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mimosa Festival - Pricing</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #fff9f0; /* Light champagne color */
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #fff9f0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ffb347; /* Golden orange hover */
+    }
+
+    /* Hamburger Menu for Mobile */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 2rem;
+        gap: 1rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    /* Pricing Section */
+    .pricing {
+      max-width: 600px;
+      margin: 5rem auto 2rem;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    .pricing h1 {
+      color: #ffb347; /* Golden orange title */
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+
+    .price-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .price-item {
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px dotted #eeeeee;
+      transition: color 0.3s;
+    }
+
+    .price-item:hover {
+      color: #ffb347;
+    }
+
+    .price-item .tier {
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-align: left;
+    }
+
+    .price-item .amount {
+      font-size: 1.2rem;
+      color: #333333; /* Starting golden color for prices */
+      text-align: right;
+      transition: color 0.3s;
+    }
+
+    .price-item:hover .amount {
+      color: #ffb347; /* Lighter mimosa orange on hover */
+    }
+
+    .pricing-card {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 600px) {
+      .pricing-card {
+        padding: 1.5rem 1rem;
+      }
+    }
+
+    .btn {
+      background-color: #ffb347;
+      color: white;
+      padding: 0.75rem 2rem;
+      margin-top: 3rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #ffd580;
+      color: #333;
+    }
+    a { cursor: default; color: black; text-decoration:none; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo"><a href="home.html">Mimosa Festival</a></div>
+    <div class="nav-links" id="navLinks">
+      <a href="vendor.html">Become a Vendor</a>
+      <a href="home.html">About Us</a>
+      <a href="pricing.html">Buy Tickets</a>
+
+    </div>
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+
+  <!-- Pricing Section -->
+  <section class="pricing">
+    <div class="pricing-card">
+      <h1>Ticket Pricing</h1>
+      <div class="price-list">
+        <a href="https://www.eventbrite.com/" target="_blank" class="price-item">
+          <div class="tier">General Admission</div>
+          <div class="amount">$25</div>
+        </a>
+
+        <a href="https://www.eventbrite.com/" target="_blank" class="price-item">
+          <div class="tier">Mimosa Pass Ticket</div>
+          <div class="amount">$50</div>
+        </a>
+
+        <a href="https://www.eventbrite.com/" target="_blank" class="price-item">
+          <div class="tier">Mimosa Tent VIP</div>
+          <div class="amount">$475</div>
+        </a>
+
+        <a href="https://www.eventbrite.com/" target="_blank" class="price-item">
+          <div class="tier">VIP Table for 4</div>
+          <div class="amount">$220</div>
+        </a>
+
+        <a href="https://www.eventbrite.com/" target="_blank" class="price-item">
+          <div class="tier">VIP Table for 6</div>
+          <div class="amount">$300</div>
+        </a>
+
+        <a href="https://www.eventbrite.com/" target="_blank" class="price-item">
+          <div class="tier">VIP Table for 8</div>
+          <div class="amount">$370</div>
+        </a>
+
+        <a href="https://www.eventbrite.com/" target="_blank" class="price-item">
+          <div class="tier">Bring Your Own Tent Slot</div>
+          <div class="amount">$30</div>
+        </a>
+
+        <a href="https://www.eventbrite.com/" target="_blank" class="price-item">
+          <div class="tier">VIP Parking Pass</div>
+          <div class="amount">$50</div>
+        </a>
+      </div>
+
+      <a href="https://www.eventbrite.com/" target="_blank" class="btn">Buy Tickets</a>
+    </div>
+  </section>
+
+  <!-- JavaScript for mobile menu -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
