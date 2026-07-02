@@ -78,8 +78,6 @@ if (accessToken) {
     document.getElementById("status").innerHTML =
         "✅ Authenticated with Workday";
 
-    // Remove token from browser URL
-    history.replaceState({}, document.title, window.location.pathname);
 
 }
 else {
